@@ -1,0 +1,11 @@
+<div class="postzoom">
+	<h2 class="title"><%= post.title %></h2>
+	<p class="meta"><small><%= post.linked_tags %></small></p>
+	<p class="meta"><%= post.created_at %></p>
+	<div class="entry">
+		<%= post.body_html %>
+	</div>
+	<% if admin? %>
+		<div class="edit"><a href="<%= post.url %>edit">edit</a></div>
+	<% end %>
+</div>
